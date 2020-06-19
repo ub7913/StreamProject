@@ -26,10 +26,19 @@ public class FunctionExample1 {
 
 	public static void main(String[] args) {
 		System.out.println("학생이름");
-		printString(t->t.getName());
+		//printString(t->t.getName());
+		printString(new Function<Student, String>(){
+
+			@Override
+			public String apply(Student t) {
+				return t.getName();
+			}
+			
+		});
+		
 		
 		System.out.println("영어 점수");	
-		printInt(t->t.getEnglishScore());
+		printInt((t)->t.getEnglishScore());
 		
 		System.out.println("수학 점수");
 		printInt(t->t.getMathScore());

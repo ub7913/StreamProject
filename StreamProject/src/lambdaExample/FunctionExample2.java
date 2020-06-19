@@ -17,7 +17,7 @@ public class FunctionExample2 {
 	}
 	
 	public static void main(String[] args) {
-		double englishAvg = avg(s->s.getEnglishScore());
+		double englishAvg = avg((s)->s.getEnglishScore());
 		System.out.println("영어 평균 점수: " + englishAvg);
 		
 		double mathAvg = avg(s->s.getMathScore());
